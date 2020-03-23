@@ -1,0 +1,31 @@
+d1 $ jux (# accelerate "-9") $ s "supercomparator*10" # midinote "[40!6 38]/8"
+ # sustain "1 0.25 2 1" +vowel "a"
+
+d2 $ jux (# accelerate "-0.4") $ s "supercomparator*11" # midinote "[40!6 38]/8"
+  # sustain "1 0.25 2 1" +vowel "e"
+
+
+d3 $ jux (# accelerate "-0.1") $ s "supercomparator*3" # midinote "[40!7 38]/8"
+   # sustain "1 0.25 2 1" +vowel "i"
+
+
+d4 $ jux (# accelerate "-0.1") $ s "supercomparator*2" # midinote "[40!9 38]/8"
+    # sustain "1 0.25 2 1"   +vowel "u"
+
+
+
+
+
+
+
+
+
+d2 $ sound "LOTICV:20 LOTICV:13 LLTXS_rave_stabs:2 LOTICV:19" +vowel "a" |+| speed "4.3"   # sustain "1 0.25 2 1"
+
+d3 $ sound "LOTICV:20 LOTICV:18 LLTXS_rave_stabs:2 LOTICV:19" +vowel "u" |+| speed "9.3"   # sustain "1 0.25 2 1"
+
+d3$ silence
+
+d4$ sound "gabba 909"
+
+hush

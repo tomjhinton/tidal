@@ -1,18 +1,56 @@
 hush
 
-clutchIn 1 3  $ sound "LLTXS_rave_stabs:8(5,8)"
+clutchIn 1 3  $ sound "LLTXS_rave_stabs:9(5,8)"
 
 clutchIn 1 6  $ sound "LLTXS_texcore_kicks:1(5,8)"
 
-clutchIn 1 4  $ sound "LLTXS_texcore_kicks:2(5,8)"
+clutchIn 1 4  $ sound "LLTXS_texcore_kicks:2(3,7)"
 
 clutchIn 1 4   $ sound "LLTXS_fuck_snares:2(5,8)"
 
+hush
 
-clutchIn 2 3  $ sound "LLTXS_rave_stabs:8(3,8)"
+clutchIn 2 3  $ sound "LLTXS_rave_stabs:8(3,8)" #squiz 4
 
 clutchIn 2 6  $ sound "LLTXS_texcore_kicks:1(5,8)"
 
 clutchIn 2 4  $ sound "LLTXS_texcore_kicks:2(5,8)"
 
 clutchIn 2 4  $ sound "LLTXS_fuck_snares:2(5,8)"
+
+d1 $ jux' [id,rev,(# speed 3)] $ every 3 ("<0.25 0.125 0.9>" <~) $ sound "LLTXS_fuck_snares:5*2 [[~ LLTXS_texcore_kicks:7] LLTXS_fuck_snares:3:3] LLTXS_texcore_kicks:2:1 [LLTXS_rave_stabs:9 LLTXS_texcore_kicks:1*2]"
+  # squiz "<1 2.5 2>"
+  # room (slow 5 $ range 0 0.5 saw)
+  # sz 0.2
+  # orbit 1
+
+
+
+d1 $ stack [
+      iter 4 $ sound "LLTXS_fx:6 LLTXS_fuck_snares:3" # pan "0",
+      chop 18 $ sound "LLTXS_fx:3 LLTXS_fuck_snares:5" # pan "0.25",
+      sound "LLTXS_fx:4 LLTXS_fuck_snares:7" # pan "0.5",
+      rev $ sound "LLTXS_fx:6 LLTXS_fuck_snares:9" # pan "0.75",
+      palindrome $ sound "LLTXS_fx:6 LLTXS_attacks_toks:2" # pan "1"
+      ]
+
+
+clutchIn 1 4 $ stack [
+            iter 4 $ sound "LLTXS_fx:3 LLTXS_fuck_snares:4" # pan "0",
+            chop 12 $ sound "LLTXS_fx:5 LLTXS_fuck_snares:6" # pan "0.25",
+            sound "LLTXS_fx:5 LLTXS_attacks_toks:8" # pan "0.5",
+            rev $ sound "LLTXS_fx:7 LLTXS_fuck_snares:10" # pan "0.75",
+            palindrome $ sound "LLTXS_fx:5 LLTXS_fuck_snares:3" # pan "1"
+            ]
+
+
+clutchIn 1 4 $ stack [
+            iter 4 $ sound "LLTXS_fx:3 LLTXS_fuck_snares:8" # pan "0",
+            chop 1 $ sound "LLTXS_fx:5 LLTXS_fuck_snares:6" # pan "0.25",
+            sound "LLTXS_rave_stabs:8 LLTXS_attacks_toks:8" # pan "0.5",
+            rev $ sound "LLTXS_fx:7 LLTXS_fuck_snares:10" # pan "0.75",
+            palindrome $ sound "LLTXS_fx:5 LLTXS_fuck_snares:3" # pan "1"
+                        ]
+
+
+d1 $ sound "LLTXS_attacks_toks:9 LLTXS_attacks_toks:17"
