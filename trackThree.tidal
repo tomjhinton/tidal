@@ -1,0 +1,45 @@
+do
+  let bars = 4
+      key = "8"
+      righthand = "[[4 -3] [0 _ _ _ _ _ 0]] [[-3, -8] [7 5 4 0]]"
+      lefthand = "[0 9 12 16] [4 12 16 19] [5 12 17 19] [2 12 17 16]"
+  d1 $ slow bars
+     $ stack [
+         n (righthand + key + "<24 36>/2"),
+         n (lefthand + key)
+       ]
+     # s "superhoover"
+     # octave "3"
+     # velocity "0.3 0.5 0.8 0.9"
+     # sustain "[2 0.7]*4"
+
+
+
+
+     do
+       let bars = 4
+           key = "8"
+           righthand = "[[4 -3] [0 _ _ _ _ _ 0]] [[-3, -8] [7 5 4 0]]"
+           lefthand = "[0 9 12 16] [4 12 16 19] [5 12 17 19] [2 12 17 16]"
+       d2 $ slow bars
+          $ stack [
+              n (righthand + key + "<24 36>/3"),
+              n (lefthand + key)
+            ]
+          # s "supersaw"
+          # octave "3"
+          # velocity "0.3 0.5 0.8 0.9"
+          # sustain "[2 0.7]*4"
+
+
+
+
+hush
+
+d2 $ jux' [id,rev,(# speed 3)] $ every 3 ("<0.25 0.125 0.9>" <~) $ sound "LLTXS_fuck_snares:4*2 [[~ LLTXS_texcore_kicks:7] LLTXS_fuck_snares:3:2] LLTXS_texcore_kicks:5:1 [LLTXS_rave_stabs:9 LLTXS_texcore_kicks:1*2]"
+       # squiz "<1 1.5 0.2>"
+       # room (slow 5 $ range 0 0.5 saw)
+       # sz 0.2
+       # orbit 1
+       # speed (perlin2 (sine*4) +1)
+       # gain "0.7 0.7 0.5"

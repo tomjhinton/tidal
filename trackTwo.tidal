@@ -6,7 +6,7 @@ d2 $ jux (# accelerate "-0.4") $ s "supercomparator*11" # midinote "[40!6 38]/8"
 
 
 d3 $ jux (# accelerate "-0.1") $ s "supercomparator*3" # midinote "[40!7 38]/8"
-   # sustain "1 0.25 2 1" +vowel "i"
+   # sustain "1 0.25 2 1" +vowel "i a e"
 
 
 d4 $ jux (# accelerate "-0.1") $ s "supercomparator*2" # midinote "[40!9 38]/8"
@@ -24,8 +24,34 @@ d2 $ sound "LOTICV:20 LOTICV:13 LLTXS_rave_stabs:2 LOTICV:19" +vowel "a" |+| spe
 
 d3 $ sound "LOTICV:20 LOTICV:18 LLTXS_rave_stabs:2 LOTICV:19" +vowel "u" |+| speed "9.3"   # sustain "1 0.25 2 1"
 
-d3$ silence
+d1$ silence
 
-d4$ sound "gabba 909"
+once $ sound "LLTXS_fuck_snares:8"
+
+
+once $ s "supercomparator" # midinote "[9 38]"
+
+
+d2 $ s "LLTXS_fuck_snares:2*8  LLTXS_rave_stabs:3 " # speed (perlin2 (sine*4) +4) +vowel "u a e o"   # sustain "1 0.25 2 1"
+
+
+d3 $ s "LLTXS_fuck_snares:1*4  LLTXS_rave_stabs:2 " # speed (perlin2 (sine*4) +1) +vowel "u a e o"   # sustain "1 0.25 2 1"
+
+d4 $ s "LLTXS_fuck_snares:2*6  LLTXS_rave_stabs:9 " # speed (perlin2 (sine*4) +1) +vowel "u i e o"   # sustain "1 0.25 2 1"
+
+d2 $ s "superhex" # decay "[01.3 0.2]/4" # voice "[0.6 2]/8" # midinote "[29 38]/8"
+
 
 hush
+
+
+
+
+hush
+
+d1 $ jux' [id,rev,(# speed 3)] $ every 3 ("<0.25 0.125 0.9>" <~) $ sound "LLTXS_fuck_snares:4*2 [[~ LLTXS_texcore_kicks:7] LLTXS_fuck_snares:3:2] LLTXS_texcore_kicks:5:1 [LLTXS_rave_stabs:9 LLTXS_texcore_kicks:1*2]"
+  # squiz "<1 1.5 0.2>"
+  # room (slow 5 $ range 0 0.5 saw)
+  # sz 0.2
+  # orbit 1
+  # speed (perlin2 (sine*4) +1)
