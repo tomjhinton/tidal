@@ -1,17 +1,36 @@
+import System.Random
+
+
+
 do
   let bars = 4
       key = "8"
-      righthand = "[[4 -3] [0 _ _ _ _ _ 0]] [[-3, -8] [7 5 4 0]]"
-      lefthand = "[0 9 12 16] [4 12 16 19] [5 12 17 19] [2 12 17 16]"
+      righthand = "[[4 -3] [0 _ _ 7 _ _ 0]] [[-3, -8] [7 5 4 0]]"
+      lefthand = "[0 9 12 16] [3 6 9 19] [5 12 17 19] [2 12 7 16]"
   d1 $ slow bars
      $ stack [
-         n (righthand + key + "<24 36>/2"),
-         n (lefthand + key)
+         n (righthand + key + "<12 24>/3"),
+         n (lefthand + key),
+         n (lefthand + key + "<12 24>/3")
        ]
      # s "superhoover"
-     # octave "3"
+     # octave "2"
      # velocity "0.3 0.5 0.8 0.9"
-     # sustain "[2 0.7]*4"
+     # sustain "[2 0.7]*8"
+     # speed (perlin2 (sine*4))
+     +vowel "u"
+  d2 $ slow bars
+        $ stack [
+            n (righthand + key + "<12 24>/3"),
+            n (lefthand + key),
+            n (lefthand + key + "<12 24>/3")
+          ]
+        # s "supersaw"
+        # octave "4"
+        # velocity "0.3 0.5 0.8 0.9"
+        # sustain "[2 0.7]*4"
+        # speed (perlin2 (sine*4))
+        +vowel "a"
 
 
 
@@ -19,14 +38,13 @@ do
      do
        let bars = 4
            key = "8"
-           righthand = "[[4 -3] [0 _ _ _ _ _ 0]] [[-3, -8] [7 5 4 0]]"
+           righthand = "[[8 -3] [0 _ _ _ _ _ 0]] [[-3, -8] [7 5 4 0]]"
            lefthand = "[0 9 12 16] [4 12 16 19] [5 12 17 19] [2 12 17 16]"
        d2 $ slow bars
           $ stack [
-              n (righthand + key + "<24 36>/3"),
-              n (lefthand + key)
+              n (righthand + key + "<24 36>/3")
             ]
-          # s "supersaw"
+          # s "superhoover"
           # octave "3"
           # velocity "0.3 0.5 0.8 0.9"
           # sustain "[2 0.7]*4"
@@ -36,10 +54,16 @@ do
 
 hush
 
-d2 $ jux' [id,rev,(# speed 3)] $ every 3 ("<0.25 0.125 0.9>" <~) $ sound "LLTXS_fuck_snares:4*2 [[~ LLTXS_texcore_kicks:7] LLTXS_fuck_snares:3:2] LLTXS_texcore_kicks:5:1 [LLTXS_rave_stabs:9 LLTXS_texcore_kicks:1*2]"
+once $ jux' [id,rev,(# speed 3)] $ every 3 ("<0.25 0.125 0.9>" <~) $ sound "LLTXS_fuck_snares:4*2 [[~ LLTXS_texcore_kicks:7] LLTXS_fuck_snares:3:2] LLTXS_texcore_kicks:5:1 [LLTXS_rave_stabs:9 LLTXS_texcore_kicks:1*2]"
        # squiz "<1 1.5 0.2>"
        # room (slow 5 $ range 0 0.5 saw)
        # sz 0.2
        # orbit 1
        # speed (perlin2 (sine*4) +1)
-       # gain "0.7 0.7 0.5"
+       # gain "0.9 0.9 0.9"
+
+
+once $ sound "rsec:19 rsec:12 rsec:12 rsec:20 rsec:12 LLTXS_rave_stabs:10*4" # room (slow 5 $ range 0 0.5 saw)  # speed (perlin2 (sine*9) +5)  # squiz "<1 1.5 0.2>"   # sustain "[2 0.7]*4"
+
+
+d1 $ sound "rsec:17 rsec:18 rsec:14 rsec:20 rsec:12 LLTXS_rave_stabs:1*2" # room (slow 5 $ range 0 0.5 saw)  # speed (perlin2 (sine*9) +5)  # squiz "<1 1.5 1.2 9>"
