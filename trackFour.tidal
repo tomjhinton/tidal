@@ -1,0 +1,2 @@
+d4 $ jux (# accelerate "-0.5") $ s "superhoover*4" # midinote "[40 28 36 36 36]"
+    # sustain "1 0.75 2 1"   +vowel "u a e a a i a o" # pan (slowcat [sine]) #room 9  #legato 4

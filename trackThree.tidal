@@ -67,3 +67,10 @@ once $ sound "rsec:19 rsec:12 rsec:12 rsec:20 rsec:12 LLTXS_rave_stabs:10*4" # r
 
 
 d1 $ sound "rsec:17 rsec:18 rsec:14 rsec:20 rsec:12 LLTXS_rave_stabs:1*2" # room (slow 5 $ range 0 0.5 saw)  # speed (perlin2 (sine*9) +5)  # squiz "<1 1.5 1.2 9>"
+
+
+d1 $ sound "bd sd . mt ht lt . arpy@0.5 arpy:4 rsec:9 . snare clap:4 bd" # squiz "<1 1.5 1.2 9>"
+
+
+
+d1 $ sound "bd [arpy arpy:1 arpy:2 arpy:3]/4" 
