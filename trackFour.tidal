@@ -1,2 +1,15 @@
 d4 $ jux (# accelerate "-0.5") $ s "superhoover*4" # midinote "[40 28 36 36 36]"
     # sustain "1 0.75 2 1"   +vowel "u a e a a i a o" # pan (slowcat [sine]) #room 9  #legato 4
+
+hush
+
+d1 $ n "0 2 4 6 [0 5 7]/3 [0 6 3 6]/2 2 6 8" # sound "808" +vowel "u a e a a i a o" # pan (slowcat [sine]) #room 2  #legato 4
+
+d1 $ sound "LLTXS_texcore_kicks:7(3,9)"
+
+d2 $ sound "LLTXS_texcore_kicks:8(4,9)"
+
+d3 $ sound "LLTXS_texcore_kicks:9(5,9)" 
+
+
+draw "x(3,8)"
