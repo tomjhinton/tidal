@@ -73,4 +73,4 @@ d1 $ sound "bd sd . mt ht lt . arpy@0.5 arpy:4 rsec:9 . snare clap:4 bd" # squiz
 
 
 
-d1 $ sound "bd [arpy arpy:1 arpy:2 arpy:3]/4" 
+d1 $ sound "LLTXS_texcore_kicks:16 [LLTXS_texcore_kicks:17 LLTXS_texcore_kicks:18 LLTXS_texcore_kicks:19 LLTXS_texcore_kicks:20]/4"    # room (slow 5 $ range 0 0.5 saw)

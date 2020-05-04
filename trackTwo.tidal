@@ -49,7 +49,7 @@ hush
 
 hush
 
-d1 $ jux' [id,rev,(# speed 3)] $ every 3 ("<0.25 0.125 0.9>" <~) $ sound "LLTXS_fuck_snares:4*2 [[~ LLTXS_texcore_kicks:7] LLTXS_fuck_snares:3:2] LLTXS_texcore_kicks:5:1 [LLTXS_rave_stabs:9 LLTXS_texcore_kicks:1*2]"
+d1 $ jux' [id,rev,(# speed 3)] $ every 3 ("<0.25 0.125 0.9>" <~) $ sound "LLTXS_fuck_snares:4*2 [[~ LLTXS_texcore_kicks:7] LLTXS_fuck_snares:3/2] LLTXS_texcore_kicks:5:1 [LLTXS_rave_stabs:9 LLTXS_texcore_kicks:1*2]"
   # squiz "<1 1.5 0.2>"
   # room (slow 5 $ range 0 0.5 saw)
   # sz 0.2

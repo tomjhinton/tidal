@@ -1,11 +1,11 @@
 
 hush
 
-d1 $ palindrome $ n "{[0 2 4 6 [0 5 7]/3 [0 6 3 6]/2], 2 6 8}" # sound "super808"  #room 2.5 #djf 200  # size 0.9 #delay 0.5
+d1 $ palindrome $ n "{[0 2 4 6 [0 5 7]/3 [0 6 3 6]/2], 2 6 8}" # sound "super808"  #room 2.5  # size 0.9 #delay 0.5 #triode 20
 
 d2 $ palindrome $ n "[2 4 6 8, 5 3 1]" # sound "super808"  #room 2.5 # size 0.9
 
-d3 $  n "[2 4 6 8, 5 3 1]" # sound "super808"  #room 2.5 # size 0.9
+d3 $  n "[2 4 6 8, 5 3 1]" # sound "super808"  #room 2.5 # size 0.9 #triode 20
 
 d4 $  n "[2 2 4 4 6 6 7, 7 5 5 3 3 2 2]" # sound "super808"  #room 2.5
 
@@ -13,34 +13,22 @@ d5 $  n "[2 3 4 5 6, 22]" # sound "super808"  #room 2.5
 
 
 
-d1  $ s "super808*120" # n (run 8) #delay 0.2 #enhance 0.2 #room 2.5
+d1 $  n "[2 3 4 5 6, 22 23]" # sound "LLTXS_attacks_toks"  #room 2.5
+hush
 
 
+d4 $ jux (# accelerate "-0.2") $ s "supergong" # midinote "4 3 6 7"# sustain "1 0.25 2 1" +vowel "e" #gain 1.5
 
-d4 $ jux (# accelerate "-2") $ s "super808" # n "[40!6 38]/8"# sustain "1 0.25 2 1" +vowel "a" #gain 1.5
+clutchIn 1 4 $ stack [iter 4 $ sound "LLTXS_fx:3 LLTXS_fuck_snares:4" # pan "0",chop 12 $ sound "LLTXS_fx:5 LLTXS_fuck_snares:6" # pan "0.25",sound "LLTXS_fx:5 LLTXS_attacks_toks:8" # pan "0.5",rev $ sound "LLTXS_fx:7 LLTXS_fuck_snares:10" # pan "0.75",palindrome $ sound "LLTXS_fx:5 LLTXS_fuck_snares:3" # pan "1"]
 
-clutchIn 1 4 $ stack [
-            iter 4 $ sound "LLTXS_fx:3 LLTXS_fuck_snares:4" # pan "0",
-            chop 12 $ sound "LLTXS_fx:5 LLTXS_fuck_snares:6" # pan "0.25",
-            sound "LLTXS_fx:5 LLTXS_attacks_toks:8" # pan "0.5",
-            rev $ sound "LLTXS_fx:7 LLTXS_fuck_snares:10" # pan "0.75",
-            palindrome $ sound "LLTXS_fx:5 LLTXS_fuck_snares:3" # pan "1"
-]
-
-clutchIn 3 5 $ stack [
-            iter 4 $ sound "LLTXS_fx:3 LLTXS_fuck_snares:4" # pan "0",
-            chop 12 $ sound "LLTXS_fx:5 LLTXS_fuck_snares:6" # pan "0.25",
-            sound "LLTXS_fx:5 LLTXS_attacks_toks:8" # pan "0.5",
-            rev $ sound "LLTXS_fx:7 LLTXS_fuck_snares:10" # pan "0.75",
-            palindrome $ sound "LLTXS_fx:5 LLTXS_fuck_snares:3" # pan "1"
-]
+clutchIn 3 5 $ stack [iter 4 $ sound "LLTXS_fx:3 LLTXS_fuck_snares:4" # pan "0",chop 12 $ sound "LLTXS_fx:5 LLTXS_fuck_snares:6" # pan "0.25",sound "LLTXS_fx:5 LLTXS_attacks_toks:8" # pan "0.5",rev $ sound "LLTXS_fx:7 LLTXS_fuck_snares:10" # pan "0.75",palindrome $ sound "LLTXS_fx:5 LLTXS_fuck_snares:3" # pan "1"]
 
 
-clutchIn 1 4  $ palindrome $ n "{[0 2 4 6 [0 5 7]/3 [0 6 3 6]/2], 2 6 8}" # sound "super808"  #room 2.5 #djf 200  # size 0.9 #delay 0.5
+clutchIn 1 4  $ palindrome $ n "{[0 2 4 6 [0 5 7]/3 [0 6 3 6]/2], 2 6 8}" # sound "super808"  #room 2.5   # size 0.9 #delay 0.5
 
-clutchIn 2 4  $ palindrome $ n "{[0 2 4 6 [0 5 7]/3 [0 6 3 6]/2], 2 6 8}" # sound "super808"  #room 2.5 #djf 200  # size 0.9 #delay 0.5
+clutchIn 2 4  $ palindrome $ n "{[0 2 4 6 [0 5 7]/3 [0 6 3 6]/2], 2 6 8}" # sound "super808"  #room 2.5   # size 0.9 #delay 0.5
 
-clutchIn 3 4  $ palindrome $ n "{[0 2 4 6 [0 5 7]/3 [0 6 3 6]/2], 2 6 8}" # sound "super808"  #room 2.5 #djf 200  # size 0.9 #delay 0.5
+clutchIn 3 4  $ palindrome $ n "{[0 2 4 6 [0 5 7]/3 [0 6 3 6]/2], 2 6 8}" # sound "super808"  #room 2.5   # size 0.9 #delay 0.5
 
 clutchIn 2 4  $ palindrome $ n "[2 4 6 8, 5 3 1]" # sound "super808"  #room 2.5 # size 0.9
 
@@ -51,7 +39,7 @@ hush
 once $ sound "forever:1(3,8)" #gain 2.5
 once $ sound "forever:0(3,8)" #gain 2.5
 
-setcps 0.5625
+setcps 0.2625
 
 
 d1 $ sound "rash:7(5,8,2)"

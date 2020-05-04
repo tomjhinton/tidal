@@ -1,0 +1,3 @@
+d1 $ sound "bd(7,16)"
+   # room 0.7
+   # sz (range 0.4 1 $ slow 4 perlin)
