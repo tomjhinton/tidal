@@ -2,3 +2,5 @@ d1 $  n "20 23 24 25" # sound "Clouds"  #room 0
 
 d5 $ palindrome $ n "{[0 2 4 6 [0 5 7]/3 [0 6 3 6]/2], 2 6 8}" # sound "super808"  #room 2.5  # size 0.9 #delay 0.5 #triode 20  #gain 0.5
 hush
+
+d3 $ speed (segment 32 $ range 0.5 2.5 sine) # sound "Clouds"
