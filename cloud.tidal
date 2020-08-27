@@ -20,4 +20,4 @@ d1 $ speed (segment 30 $ range 0.7 3.5 sine) # sound "Clouds:28"
 d1 $ n "4 6 8 8 6 4 3 2/2   3 2/2 8 6 6" #sound "Clouds" #gain 0.9 #delay 0.8 #room 0.7
 
 
-d1 $ sound (stitch "t(<3 5>,<8 8 8 6>,<0 2 4>)" "kick:4" "hc")
+d1 $ sound (stitch "t(<3 5>,<8 8 8 6>,<0 2 4>)" "Clouds:14" "hc")
