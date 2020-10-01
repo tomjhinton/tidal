@@ -1,13 +1,15 @@
 hush
 
-d1 $ speed (struct "t(3,8)" $ slow 2 $ range 0.5 2.5 sine)  # sound "rsec:28" # size 0.9 #room  2.5 #triode 20 #delay 0.5
+d1 $ speed (struct "t(3,8)" $ slow 2 $ range 0.5 2.5 sine)  # sound "rsec:7" # size 0.9 #room  2.5 #triode 20 #delay 0.5
 
-d2 $ speed (struct "t(3,7)" $ slow 2 $ range 0.5 2.5 sine)# sound "dsynth:3"
+d2 $ speed (struct "t(3,7)" $ slow 2 $ range 0.5 2.5 sine)# sound "dsynth:1"
 
-d3 $ speed (struct "t(3,5)" $ fast 3 $ range 0.5 2.5 sine) # sound "kick:1"
+d2$ silence
 
-d4 $ speed (struct "t(3,4)" $ fast 3 $ range 0.5 2.5 sine)# sound "clap" # size 0.9 #room  2.5
+d3 $ speed (struct "t(3,5)" $ fast 3 $ range 0.5 2.5 sine) # sound "Clouds:49"
+
+d4 $ speed (struct "t(3,4)" $ fast 4 $ range 0.5 2.5 sine)# sound "clap:1" # size 0.9 #room  2.5
 
 d5 $ palindrome $ n "{[0 2 4 6 [0 5 7]/3 [0 6 3 6]/2], 2 6 8}" # sound "super808"  #room 2.5  # size 0.9 #delay 0.5 #triode 20  #gain 0.5
 
-d1 $ sound "rsec:37"
+d1 $ sound "rsec:1"
